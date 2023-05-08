@@ -1,10 +1,11 @@
 FROM debian:buster-slim
-
+LABEL "Project"="devpro"
+LABEL "Author"="Ikay"
 
 ENV MYSQL_ROOT_PASSWORD= "devprodbpass"
 ENV MYSQL_DATABASE= "accounts"
 
-ADD db_backup.sql docker-entrypoint-initdb.d/db_backup,sql
+ADD db_backup.sql docker-entrypoint-initdb.d/db_backup.sql
 
 
 VOLUME /var/lib/mysql

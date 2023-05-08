@@ -1,0 +1,6 @@
+FROM nginx
+LABEL "Project"="devpro"
+LABEL "Author"="Ikay"
+
+RUN rm-rf /etc/nginx/conf.d/default.conf
+COPY ngindevproapp.conf /etc/nginx/conf.d/devproapp.conf
